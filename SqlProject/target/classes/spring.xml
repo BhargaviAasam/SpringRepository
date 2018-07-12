@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<import resource="datasource.xml"/>
+	
+
+	<bean name="iaElement1" class="com.spi.mysore.ItemAttributes">
+				<property name="item_name" value="Iphone X" />
+				<property name="color" value="Black" />
+				<property name="size" value="5.3" /> 
+				<property name="price" value="499.00" />
+				
+	</bean>
+	
+	<bean name="itemAttributesDAOImpl" class="com.spi.mysore.ItemAttributeDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+</beans>
